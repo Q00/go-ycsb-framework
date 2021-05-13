@@ -3,17 +3,15 @@ package main
 import (
 	"context"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"log"
 	"net"
 	"sync"
 	"time"
 
-	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang.org/x/crypto/ssh"
-	"golang.org/x/crypto/ssh/agent"
 )
 
 type Endpoint struct {
@@ -34,141 +32,61 @@ type SSHtunnel struct {
 }
 
 func (tunnel *SSHtunnel) Start() error {
-	fmt.Println("listen")
-	// ssh port 10000 이상으로 체크하기
-	// listener, err := net.Listen("tcp", ":60000")
-	// if err != nil {
-	// 	fmt.Println(err)
-	// 	return err
-	// }
-
-	// fmt.Println("first")
-	// fmt.Println(listener.Addr().String())
-
-	// defer listener.Close()
-	// fmt.Println("second")
-	// fmt.Println(listener.Addr().String())
-	conn, err := net.Dial("tcp", "localhost:60000")
-	// conn, err := listener.Accept()
+	// ssh -L 60000:127.0.0.1:27017 -p 2233 itm12@117.17.189.6
+	listener, err := net.Dial("tcp", tunnel.Local.String())
 	if err != nil {
-		fmt.Println("connection closed")
 		return err
 	}
+	defer listener.Close()
 
-	fmt.Println("123")
-
-	go tunnel.forward(conn)
-
+	fmt.Println("listner")
+	go tunnel.forward(listener)
+	// for {
+	// 	fmt.Println("accpet before")
+	// 	conn, err := listener.Accept()
+	// 	if err != nil {
+	// 		return err
+	// 	}
+	// 	fmt.Println("accpet after")
+	// 	go tunnel.forward(conn)
+	// }
 	return nil
 }
 
 func (tunnel *SSHtunnel) forward(localConn net.Conn) {
-	fmt.Println("test")
-	serverConn, err := ssh.Dial("tcp", tunnel.Server.String(), tunnel.Config)
-	if err != nil {
-		fmt.Printf("Server dial error: %s\n", err)
-		return
-	}
-
-	remoteConn, err := serverConn.Dial("tcp", tunnel.Remote.String())
-	if err != nil {
-		fmt.Printf("Remote dial error: %s\n", err)
-		return
-	}
-
-	fmt.Println("remote", remoteConn)
-
-	copyConn := func(writer, reader net.Conn) {
-		defer writer.Close()
-		defer reader.Close()
-
-		_, err := io.Copy(writer, reader)
-		if err != nil {
-			fmt.Printf("io.Copy error: %s", err)
-		}
-	}
-
-	go copyConn(localConn, remoteConn)
-	go copyConn(remoteConn, localConn)
-
-	defer serverConn.Close()
-	defer remoteConn.Close()
-
-	sshClient, err := agent.NewClient(remoteConn), err
-	if err != nil {
-		fmt.Println("ssh", err)
-		return
-	}
-
-	fmt.Println("sshclient", sshClient)
-
-	fmt.Println(ssh.PublicKeysCallback(sshClient.Signers))
-
-	// var waitGroup sync.WaitGroup
-
-	// waitGroup.Add(2)
-
-	// go func(c net.Conn) {
-	// 	i := 0
-	// 	for {
-	// 		s := "mongodb"
-
-	// 		r, err := c.Write([]byte(s)) // 서버로 데이터를 보냄
-	// 		if err != nil {
-	// 			fmt.Println(err)
-	// 			return
-	// 		}
-
-	// 		fmt.Println("send", r)
-
-	// 		i++
-	// 		time.Sleep(1 * time.Second)
-	// 	}
-	// }(remoteConn)
-
-	// go func(c net.Conn) {
-	// 	data := make([]byte, 4096) // 4096 크기의 바이트 슬라이스 생성
-
-	// 	for {
-	// 		n, err := c.Read(data) // 서버에서 받은 데이터를 읽음
-	// 		if err != nil {
-	// 			fmt.Println("return", err)
-	// 			return
-	// 		}
-
-	// 		fmt.Println("data", string(data[:n])) // 데이터 출력
-	// 		log.Println("Server send : " + string(data[:n]))
-
-	// 		time.Sleep(1 * time.Second)
-	// 	}
-	// }(remoteConn)
-
-	// waitGroup.Wait()
-
-	// fmt.Scanln()
-
-	// ctx, _ := context.WithTimeout(context.Background(), 10)
-	// clientOptions := options.Client().ApplyURI("mongodb://root:test1234@localhost:27017/?connect=direct&sslInsecure=true")
-
-	// client, err := mongo.Connect(ctx, clientOptions)
+	// serverConn, err := ssh.Dial("tcp", tunnel.Server.String(), tunnel.Config)
 	// if err != nil {
-	// 	log.Fatal(err)
+	// 	fmt.Printf("Server dial error: %s\n", err)
+	// 	return
 	// }
 
-	// fmt.Println("client", client)
-
-	// err = client.Ping(context.Background(), nil)
+	// remoteConn, err := serverConn.Dial("tcp", tunnel.Remote.String())
 	// if err != nil {
-	// 	log.Fatal(err)
+	// 	fmt.Printf("Remote dial error: %s\n", err)
+	// 	return
 	// }
+
+	// copyConn := func(writer, reader net.Conn) {
+	// 	defer writer.Close()
+	// 	defer reader.Close()
+
+	// 	_, err := io.Copy(writer, reader)
+	// 	if err != nil {
+	// 		fmt.Printf("io.Copy error: %s", err)
+	// 	}
+	// }
+
+	// go copyConn(localConn, remoteConn)
+	// go copyConn(remoteConn, localConn)
+
 }
 
 func main() {
 
-	var waitGroup sync.WaitGroup
+	// var waitGroup sync.WaitGroup
 
 	localEndpoint := &Endpoint{
-		Host: "122.45.88.38",
+		Host: "localhost",
 		Port: 60000,
 	}
 
@@ -178,7 +96,7 @@ func main() {
 	}
 
 	remoteEndpoint := &Endpoint{
-		Host: "117.17.189.6",
+		Host: "localhost",
 		Port: 27017,
 	}
 
@@ -187,7 +105,7 @@ func main() {
 		Auth: []ssh.AuthMethod{
 			ssh.Password("itmserver"),
 		},
-		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
+		HostKeyCallback: ssh.HostKeyCallback(func(hostname string, remote net.Addr, key ssh.PublicKey) error { return nil }),
 	}
 
 	t := &SSHtunnel{
@@ -198,19 +116,30 @@ func main() {
 	}
 
 	fmt.Println("tunnel", t)
-	waitGroup.Add(1)
+	// waitGroup.Add(1)
 	t.Start()
+	// waitGroup.Wait()
+
 	// time.Sleep(time.Second * 3)
 	fmt.Println("start connection tunneling")
-	conn := fmt.Sprintf("mongodb://localhost:%d", 60000)
+	conn := fmt.Sprintf("mongodb://localhost:%d", t.Local.Port)
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	clientOptions := options.Client().ApplyURI(conn)
+
+	credential := options.Credential{
+		Username: "root",
+		Password: "test123",
+	}
+
+	clientOptions := options.Client()
+	clientOptions.ApplyURI(conn).SetAuth(credential)
 
 	client, err := mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	fmt.Println("Client", client)
 
 	err = client.Ping(context.Background(), nil)
 	if err != nil {
@@ -218,49 +147,49 @@ func main() {
 	}
 
 	logsCollection := client.Database("log_db").Collection("logs")
-	find, _ := logsCollection.Find(context.TODO(), bson.D{})
-	fmt.Println(find)
-	insertResult, _ := logsCollection.InsertOne(context.TODO(), bson.D{
-		{"userID", "test1234"},
-		{"array", bson.A{"flying", "squirrel", "dev"}},
-	})
-	fmt.Println("insert", insertResult)
+	// find, _ := logsCollection.Find(context.TODO(), bson.D{})
+	// fmt.Println("find", find)
 
+	// var data []bson.D
+	// if err = find.All(context.TODO(), &data); err != nil {
+	// 	fmt.Println("find err", err)
+	// }
+
+	// fmt.Println(data[0][0].Value)
+
+	// deleteResult, err := logsCollection.DeleteMany(context.TODO(), bson.D{})
+	// if err != nil {
+	// 	fmt.Println("delete err", err)
+
+	// }
+
+	// fmt.Printf("Deleted %v documents in the trainers collection\n", deleteResult.DeletedCount)
+
+	// read file csv
+	var waitGroup sync.WaitGroup
+	files, err := ioutil.ReadDir("./bigdatasample")
+	if err != nil {
+		log.Fatal(err)
+	}
+	waitGroup.Add(len(files))
+	var logs []interface{}
+	for _, fileName := range files {
+		go func(name string) {
+			defer waitGroup.Done()
+			ld := ReadCSV(name)
+			logs = append(logs, ld...)
+			log.Println(name, "finish")
+		}(fileName.Name())
+	}
 	waitGroup.Wait()
 
+	start := time.Now()
+
+	insertManyResult, err := logsCollection.InsertMany(context.TODO(), logs)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Inserted multiple documents: ", insertManyResult.InsertedIDs)
+	elapsed := time.Since(start)
+	log.Printf("insertMany took %s", elapsed)
 }
-
-// func main() {
-
-// 	// fmt.Println(tunnel)
-
-// 	// log for debugging
-// 	tunnel.Log = log.New(os.Stdout, "", log.Ldate|log.Lmicroseconds)
-
-// 	// start sterver background
-// 	go tunnel.Start()
-// 	time.Sleep(100 * time.Millisecond)
-// 	// conn := fmt.Sprintf("host=127.0.0.1 port=%d username=foo", tunnel.Local.Port)
-// 	// fmt.Println(conn)
-// 	// ctx, _ := context.WithTimeout(context.Background(), 10)
-// 	// clientOptions := options.Client().ApplyURI("mongodb://root:test1234@117.17.189.6:27017").SetAuth(options.Credential{})
-
-// 	// client, err := mongo.Connect(ctx, clientOptions)
-
-// 	// if err != nil {
-// 	// 	log.Fatal(err)
-// 	// }
-
-// 	// err = client.Ping(context.Background(), nil)
-// 	// if err != nil {
-// 	// 	log.Fatal(err)
-// 	// }
-
-// 	// logsCollection := client.Database("log_db").Collection("logs")
-// 	// insertResult, _ := logsCollection.InsertOne(context.TODO(), bson.D{
-// 	// 	{"userID", "test1234"},
-// 	// 	{"array", bson.A{"flying", "squirrel", "dev"}},
-// 	// })
-// 	// fmt.Println(insertResult)
-
-// }
