@@ -3,12 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net"
-	"sync"
 	"time"
 
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang.org/x/crypto/ssh"
@@ -87,7 +86,7 @@ func main() {
 
 	localEndpoint := &Endpoint{
 		Host: "localhost",
-		Port: 60000,
+		Port: 27017,
 	}
 
 	serverEndpoint := &Endpoint{
@@ -147,15 +146,22 @@ func main() {
 	}
 
 	logsCollection := client.Database("log_db").Collection("logs")
-	// find, _ := logsCollection.Find(context.TODO(), bson.D{})
-	// fmt.Println("find", find)
+	fmt.Println("find before")
+	pipelined := []bson.M{bson.M{"$group": bson.M{"_id": "$device_name", "total_attack": bson.M{"$sum": 1}}}}
+	fmt.Println(pipelined)
+	start := time.Now()
 
-	// var data []bson.D
-	// if err = find.All(context.TODO(), &data); err != nil {
-	// 	fmt.Println("find err", err)
-	// }
+	find, _ := logsCollection.Aggregate(context.TODO(), pipelined)
+	fmt.Println("find", find)
 
-	// fmt.Println(data[0][0].Value)
+	var data []bson.D
+	if err = find.All(context.TODO(), &data); err != nil {
+		fmt.Println("find err", err)
+	}
+	elapsed := time.Since(start)
+	log.Printf("FindMany - query : group by deviceName took %s", elapsed)
+
+	fmt.Println(data)
 
 	// deleteResult, err := logsCollection.DeleteMany(context.TODO(), bson.D{})
 	// if err != nil {
@@ -166,30 +172,30 @@ func main() {
 	// fmt.Printf("Deleted %v documents in the trainers collection\n", deleteResult.DeletedCount)
 
 	// read file csv
-	var waitGroup sync.WaitGroup
-	files, err := ioutil.ReadDir("./bigdatasample")
-	if err != nil {
-		log.Fatal(err)
-	}
-	waitGroup.Add(len(files))
-	var logs []interface{}
-	for _, fileName := range files {
-		go func(name string) {
-			defer waitGroup.Done()
-			ld := ReadCSV(name)
-			logs = append(logs, ld...)
-			log.Println(name, "finish")
-		}(fileName.Name())
-	}
-	waitGroup.Wait()
+	// var waitGroup sync.WaitGroup
+	// files, err := ioutil.ReadDir("./bigdatasample")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// waitGroup.Add(len(files))
+	// var logs []interface{}
+	// for _, fileName := range files {
+	// 	go func(name string) {
+	// 		defer waitGroup.Done()
+	// 		ld := ReadCSV(name)
+	// 		logs = append(logs, ld...)
+	// 		log.Println(name, "finish")
+	// 	}(fileName.Name())
+	// }
+	// waitGroup.Wait()
 
-	start := time.Now()
+	// start := time.Now()
 
-	insertManyResult, err := logsCollection.InsertMany(context.TODO(), logs)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println("Inserted multiple documents: ", insertManyResult.InsertedIDs)
-	elapsed := time.Since(start)
-	log.Printf("insertMany took %s", elapsed)
+	// insertManyResult, err := logsCollection.InsertMany(context.TODO(), logs)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	// fmt.Println("Inserted multiple documents: ", insertManyResult.InsertedIDs)
+	// elapsed := time.Since(start)
+	// log.Printf("insertMany took %s", elapsed)
 }
