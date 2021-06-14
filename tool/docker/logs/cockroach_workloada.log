@@ -1,2 +1,26 @@
 {}
-create db cockroach failed pq: no database or schema specified
+***************** properties *****************
+"workload"="core"
+"maxscanlength"="10"
+"scanproportion"="0"
+"recordcount"="100000"
+"requestdistribution"="uniform"
+"updateproportion"="0.5"
+"readproportion"="0.5"
+"insertproportion"="0"
+"dotransactions"="true"
+"fieldcount"="5"
+"threadcount"="20"
+"pg.host"="cockroach"
+"pg.port"="26257"
+"operationcount"="100000"
+"readallfields"="true"
+"fieldlength"="16"
+**********************************************
+READ   - Takes(s): 10.0, Count: 17989, OPS: 1803.5, Avg(us): 2618, Min(us): 592, Max(us): 80490, 99th(us): 13000, 99.9th(us): 45000, 99.99th(us): 72000
+UPDATE - Takes(s): 10.0, Count: 17889, OPS: 1793.9, Avg(us): 8493, Min(us): 2005, Max(us): 106410, 99th(us): 23000, 99.9th(us): 52000, 99.99th(us): 97000
+READ   - Takes(s): 20.0, Count: 36757, OPS: 1840.2, Avg(us): 2518, Min(us): 592, Max(us): 80490, 99th(us): 12000, 99.9th(us): 29000, 99.99th(us): 71000
+UPDATE - Takes(s): 20.0, Count: 36824, OPS: 1843.8, Avg(us): 8299, Min(us): 1847, Max(us): 106410, 99th(us): 22000, 99.9th(us): 40000, 99.99th(us): 90000
+Run finished, takes 27.6879638s
+READ   - Takes(s): 27.7, Count: 50004, OPS: 1807.7, Avg(us): 2515, Min(us): 592, Max(us): 80490, 99th(us): 12000, 99.9th(us): 24000, 99.99th(us): 71000
+UPDATE - Takes(s): 27.7, Count: 49996, OPS: 1807.6, Avg(us): 8405, Min(us): 1847, Max(us): 106410, 99th(us): 22000, 99.9th(us): 37000, 99.99th(us): 83000

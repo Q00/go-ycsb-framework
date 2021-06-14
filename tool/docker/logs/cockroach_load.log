@@ -1,2 +1,17 @@
 {}
-create db cockroach failed pq: no database or schema specified
+***************** properties *****************
+"fieldcount"="5"
+"fieldlength"="16"
+"dotransactions"="false"
+"workload"="core"
+"pg.host"="cockroach"
+"recordcount"="100000"
+"operationcount"="100000"
+"threadcount"="20"
+"maxscanlength"="10"
+"pg.port"="26257"
+**********************************************
+INSERT - Takes(s): 9.9, Count: 33384, OPS: 3364.6, Avg(us): 5963, Min(us): 1827, Max(us): 79346, 99th(us): 16000, 99.9th(us): 24000, 99.99th(us): 79000
+INSERT - Takes(s): 19.9, Count: 68210, OPS: 3423.9, Avg(us): 5839, Min(us): 1827, Max(us): 79346, 99th(us): 15000, 99.9th(us): 25000, 99.99th(us): 77000
+Run finished, takes 29.462752s
+INSERT - Takes(s): 29.4, Count: 100000, OPS: 3403.2, Avg(us): 5839, Min(us): 1827, Max(us): 79346, 99th(us): 15000, 99.9th(us): 23000, 99.99th(us): 75000

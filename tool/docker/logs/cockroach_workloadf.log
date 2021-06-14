@@ -1,2 +1,33 @@
 {}
-create db cockroach failed pq: no database or schema specified
+***************** properties *****************
+"pg.port"="26257"
+"readproportion"="0.5"
+"workload"="core"
+"requestdistribution"="uniform"
+"readmodifywriteproportion"="0.5"
+"updateproportion"="0"
+"insertproportion"="0"
+"recordcount"="100000"
+"fieldcount"="5"
+"maxscanlength"="10"
+"readallfields"="true"
+"scanproportion"="0"
+"fieldlength"="16"
+"pg.host"="cockroach"
+"operationcount"="100000"
+"dotransactions"="true"
+"threadcount"="20"
+**********************************************
+READ   - Takes(s): 10.0, Count: 28272, OPS: 2828.8, Avg(us): 2631, Min(us): 598, Max(us): 32671, 99th(us): 12000, 99.9th(us): 18000, 99.99th(us): 26000
+READ_MODIFY_WRITE - Takes(s): 10.0, Count: 14261, OPS: 1428.0, Avg(us): 11389, Min(us): 2823, Max(us): 48881, 99th(us): 26000, 99.9th(us): 35000, 99.99th(us): 47000
+UPDATE - Takes(s): 10.0, Count: 14261, OPS: 1428.0, Avg(us): 8714, Min(us): 1986, Max(us): 38676, 99th(us): 22000, 99.9th(us): 30000, 99.99th(us): 34000
+READ   - Takes(s): 20.0, Count: 57025, OPS: 2852.0, Avg(us): 2598, Min(us): 598, Max(us): 32671, 99th(us): 11000, 99.9th(us): 18000, 99.99th(us): 25000
+READ_MODIFY_WRITE - Takes(s): 20.0, Count: 28720, OPS: 1437.0, Avg(us): 11328, Min(us): 2823, Max(us): 48881, 99th(us): 26000, 99.9th(us): 34000, 99.99th(us): 44000
+UPDATE - Takes(s): 20.0, Count: 28721, OPS: 1437.0, Avg(us): 8679, Min(us): 1820, Max(us): 41009, 99th(us): 22000, 99.9th(us): 29000, 99.99th(us): 35000
+READ   - Takes(s): 30.0, Count: 84408, OPS: 2814.1, Avg(us): 2699, Min(us): 598, Max(us): 43727, 99th(us): 12000, 99.9th(us): 19000, 99.99th(us): 40000
+READ_MODIFY_WRITE - Takes(s): 30.0, Count: 42400, OPS: 1414.0, Avg(us): 11428, Min(us): 2823, Max(us): 62674, 99th(us): 27000, 99.9th(us): 36000, 99.99th(us): 53000
+UPDATE - Takes(s): 30.0, Count: 42400, OPS: 1414.0, Avg(us): 8690, Min(us): 1820, Max(us): 50990, 99th(us): 22000, 99.9th(us): 31000, 99.99th(us): 46000
+Run finished, takes 35.0133514s
+READ   - Takes(s): 35.0, Count: 100000, OPS: 2856.6, Avg(us): 2629, Min(us): 598, Max(us): 43727, 99th(us): 12000, 99.9th(us): 19000, 99.99th(us): 40000
+READ_MODIFY_WRITE - Takes(s): 35.0, Count: 50272, OPS: 1436.4, Avg(us): 11151, Min(us): 2682, Max(us): 62674, 99th(us): 26000, 99.9th(us): 36000, 99.99th(us): 53000
+UPDATE - Takes(s): 35.0, Count: 50272, OPS: 1436.4, Avg(us): 8483, Min(us): 1820, Max(us): 50990, 99th(us): 22000, 99.9th(us): 30000, 99.99th(us): 45000

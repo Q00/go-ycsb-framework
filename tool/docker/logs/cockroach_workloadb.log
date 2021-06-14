@@ -1,2 +1,24 @@
 {}
-create db cockroach failed pq: no database or schema specified
+***************** properties *****************
+"pg.port"="26257"
+"updateproportion"="0.05"
+"threadcount"="20"
+"insertproportion"="0"
+"maxscanlength"="10"
+"workload"="core"
+"recordcount"="100000"
+"readallfields"="true"
+"requestdistribution"="uniform"
+"scanproportion"="0"
+"fieldcount"="5"
+"fieldlength"="16"
+"readproportion"="0.95"
+"dotransactions"="true"
+"operationcount"="100000"
+"pg.host"="cockroach"
+**********************************************
+READ   - Takes(s): 10.0, Count: 54870, OPS: 5487.8, Avg(us): 3169, Min(us): 607, Max(us): 51811, 99th(us): 14000, 99.9th(us): 26000, 99.99th(us): 49000
+UPDATE - Takes(s): 10.0, Count: 2856, OPS: 286.1, Avg(us): 8685, Min(us): 1863, Max(us): 55504, 99th(us): 31000, 99.9th(us): 52000, 99.99th(us): 56000
+Run finished, takes 17.5478096s
+READ   - Takes(s): 17.5, Count: 95050, OPS: 5417.3, Avg(us): 3160, Min(us): 602, Max(us): 51811, 99th(us): 14000, 99.9th(us): 24000, 99.99th(us): 47000
+UPDATE - Takes(s): 17.5, Count: 4950, OPS: 282.4, Avg(us): 8879, Min(us): 1863, Max(us): 85459, 99th(us): 32000, 99.9th(us): 54000, 99.99th(us): 86000
