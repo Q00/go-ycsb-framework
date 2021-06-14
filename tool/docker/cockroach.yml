@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3"
 
 services:
   cockroach:
@@ -8,7 +8,7 @@ services:
     ports:
       - "26257:26257"
       - "8080:8080"
-    command: start --insecure
+    command: start-single-node --insecure
     restart: on-failure
 
   db-init:
@@ -23,4 +23,6 @@ services:
 
   # monitors
   ycsb:
-    image: pingcap/go-ycsb
+    build:
+      context: ../../.
+      dockerfile: ./Dockerfile

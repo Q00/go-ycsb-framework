@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3"
 
 services:
   pd:
@@ -27,6 +27,8 @@ services:
       - ./config/tikv.toml:/tikv.toml:ro
       - ./data/tikv:/data
       - ./logs/tikv:/logs
+    ports:
+      - "20160:20160"
     command:
       - --addr=0.0.0.0:20160
       - --advertise-addr=tikv:20160
@@ -40,4 +42,6 @@ services:
 
   # monitors
   ycsb:
-    image: pingcap/go-ycsb
+    build:
+      context: ../../.
+      dockerfile: ./Dockerfile

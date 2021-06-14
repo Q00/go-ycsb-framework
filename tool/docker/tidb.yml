@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3"
 
 services:
   pd:
@@ -57,4 +57,6 @@ services:
 
   # monitors
   ycsb:
-    image: pingcap/go-ycsb
+    build:
+      context: ../../.
+      dockerfile: ./Dockerfile

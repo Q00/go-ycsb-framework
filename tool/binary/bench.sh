@@ -29,14 +29,6 @@ mkdir -p ${LOG}
 
 DBDATA=${DATA}/${DB}
 
-if [ ${DB} == 'rocksdb' ]; then 
-    PROPS+=" -p rocksdb.dir=${DBDATA}"
-    WORKLOADS="-P property/rocksdb"
-elif [ ${DB} == 'badger' ]; then 
-    PROPS+=" -p badger.dir=${DBDATA}"
-    WORKLOADS="-P property/badger"
-fi
-
 
 if [ ${TYPE} == 'load' ]; then 
     echo "clear data before load"
@@ -56,3 +48,4 @@ else
     echo "invalid type ${TYPE}"
     exit 1
 fi 
+
