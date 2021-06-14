@@ -1,0 +1,30 @@
+{}
+***************** properties *****************
+"scanproportion"="0"
+"workload"="core"
+"readallfields"="true"
+"operationcount"="100000"
+"mysql.port"="4000"
+"dotransactions"="true"
+"recordcount"="100000"
+"maxscanlength"="10"
+"updateproportion"="0.5"
+"requestdistribution"="uniform"
+"fieldlength"="16"
+"readproportion"="0.5"
+"insertproportion"="0"
+"threadcount"="20"
+"fieldcount"="5"
+"mysql.host"="tidb"
+**********************************************
+READ   - Takes(s): 10.0, Count: 9448, OPS: 948.7, Avg(us): 7612, Min(us): 2297, Max(us): 99665, 99th(us): 20000, 99.9th(us): 48000, 99.99th(us): 100000
+UPDATE - Takes(s): 9.9, Count: 9550, OPS: 960.2, Avg(us): 13291, Min(us): 2614, Max(us): 112655, 99th(us): 35000, 99.9th(us): 94000, 99.99th(us): 113000
+READ   - Takes(s): 20.0, Count: 19426, OPS: 973.3, Avg(us): 7360, Min(us): 2076, Max(us): 99665, 99th(us): 18000, 99.9th(us): 45000, 99.99th(us): 91000
+UPDATE - Takes(s): 19.9, Count: 19874, OPS: 996.4, Avg(us): 12847, Min(us): 2614, Max(us): 366786, 99th(us): 33000, 99.9th(us): 65000, 99.99th(us): 113000
+READ   - Takes(s): 30.0, Count: 29985, OPS: 1000.9, Avg(us): 7193, Min(us): 2076, Max(us): 99665, 99th(us): 17000, 99.9th(us): 33000, 99.99th(us): 83000
+UPDATE - Takes(s): 29.9, Count: 30575, OPS: 1021.0, Avg(us): 12498, Min(us): 2614, Max(us): 366786, 99th(us): 31000, 99.9th(us): 60000, 99.99th(us): 106000
+READ   - Takes(s): 40.0, Count: 41456, OPS: 1037.5, Avg(us): 6976, Min(us): 1710, Max(us): 99665, 99th(us): 17000, 99.9th(us): 29000, 99.99th(us): 63000
+UPDATE - Takes(s): 39.9, Count: 42057, OPS: 1052.8, Avg(us): 12083, Min(us): 2614, Max(us): 366786, 99th(us): 29000, 99.9th(us): 56000, 99.99th(us): 103000
+Run finished, takes 46.9242584s
+READ   - Takes(s): 46.9, Count: 49739, OPS: 1060.9, Avg(us): 6800, Min(us): 1710, Max(us): 99665, 99th(us): 16000, 99.9th(us): 28000, 99.99th(us): 63000
+UPDATE - Takes(s): 46.9, Count: 50261, OPS: 1072.4, Avg(us): 11791, Min(us): 2576, Max(us): 366786, 99th(us): 28000, 99.9th(us): 52000, 99.99th(us): 100000

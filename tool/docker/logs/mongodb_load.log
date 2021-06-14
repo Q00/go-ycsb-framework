@@ -1,0 +1,17 @@
+{}
+Connected to MongoDB!
+***************** properties *****************
+"threadcount"="20"
+"dotransactions"="false"
+"mongodb.uri"="mongodb://mongodb:27017"
+"mongodb.username"="root"
+"recordcount"="100000"
+"fieldcount"="5"
+"operationcount"="100000"
+"fieldlength"="16"
+"maxscanlength"="10"
+"mongodb.password"="test123"
+"workload"="core"
+**********************************************
+Run finished, takes 6.9797569s
+INSERT - Takes(s): 6.9, Count: 100000, OPS: 14495.7, Avg(us): 1353, Min(us): 208, Max(us): 118562, 99th(us): 7000, 99.9th(us): 15000, 99.99th(us): 84000

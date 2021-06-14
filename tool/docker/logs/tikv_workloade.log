@@ -1,0 +1,53 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"requestdistribution"="uniform"
+"tikv.pd"="pd:2379"
+"scanproportion"="0.95"
+"insertproportion"="0.05"
+"readproportion"="0"
+"maxscanlength"="10"
+"operationcount"="100000"
+"dotransactions"="true"
+"fieldlength"="16"
+"tikv.type"="txn"
+"readallfields"="true"
+"updateproportion"="0"
+"threadcount"="20"
+"workload"="core"
+"recordcount"="100000"
+"fieldcount"="5"
+"scanlengthdistribution"="uniform"
+**********************************************
+INSERT - Takes(s): 9.8, Count: 994, OPS: 101.5, Avg(us): 11835, Min(us): 4743, Max(us): 208039, 99th(us): 30000, 99.9th(us): 209000, 99.99th(us): 209000
+SCAN   - Takes(s): 9.8, Count: 18563, OPS: 1899.4, Avg(us): 10105, Min(us): 1547, Max(us): 238406, 99th(us): 23000, 99.9th(us): 33000, 99.99th(us): 239000
+INSERT - Takes(s): 19.8, Count: 2017, OPS: 101.9, Avg(us): 11594, Min(us): 4743, Max(us): 208039, 99th(us): 28000, 99.9th(us): 48000, 99.99th(us): 209000
+SCAN   - Takes(s): 19.8, Count: 38366, OPS: 1940.4, Avg(us): 9782, Min(us): 1547, Max(us): 238406, 99th(us): 22000, 99.9th(us): 30000, 99.99th(us): 236000
+INSERT - Takes(s): 29.8, Count: 3047, OPS: 102.3, Avg(us): 11707, Min(us): 4659, Max(us): 208039, 99th(us): 30000, 99.9th(us): 61000, 99.99th(us): 209000
+SCAN   - Takes(s): 29.8, Count: 57226, OPS: 1922.1, Avg(us): 9828, Min(us): 1418, Max(us): 238406, 99th(us): 22000, 99.9th(us): 30000, 99.99th(us): 236000
+INSERT - Takes(s): 39.8, Count: 4006, OPS: 100.7, Avg(us): 11801, Min(us): 4659, Max(us): 208039, 99th(us): 30000, 99.9th(us): 58000, 99.99th(us): 209000
+SCAN   - Takes(s): 39.8, Count: 75683, OPS: 1902.9, Avg(us): 9911, Min(us): 1418, Max(us): 238406, 99th(us): 22000, 99.9th(us): 30000, 99.99th(us): 236000
+[33mWARN[0m[0044] get timestamp too slow: 34.5678ms            
+[33mWARN[0m[0044] get timestamp too slow: 34.5964ms            
+[33mWARN[0m[0044] get timestamp too slow: 34.3091ms            
+[33mWARN[0m[0044] get timestamp too slow: 32.5318ms            
+[33mWARN[0m[0044] get timestamp too slow: 30.3379ms            
+[33mWARN[0m[0044] get timestamp too slow: 33.9471ms            
+[33mWARN[0m[0044] get timestamp too slow: 34.1808ms            
+[33mWARN[0m[0044] get timestamp too slow: 31.4232ms            
+[33mWARN[0m[0044] get timestamp too slow: 31.0149ms            
+[33mWARN[0m[0044] get timestamp too slow: 33.2144ms            
+INSERT - Takes(s): 49.8, Count: 4995, OPS: 100.3, Avg(us): 11526, Min(us): 4659, Max(us): 208039, 99th(us): 29000, 99.9th(us): 58000, 99.99th(us): 209000
+SCAN   - Takes(s): 49.8, Count: 94851, OPS: 1905.7, Avg(us): 9889, Min(us): 1418, Max(us): 238406, 99th(us): 22000, 99.9th(us): 31000, 99.99th(us): 233000
+Run finished, takes 50.1307663s
+INSERT - Takes(s): 49.9, Count: 4998, OPS: 100.1, Avg(us): 11522, Min(us): 4659, Max(us): 208039, 99th(us): 29000, 99.9th(us): 58000, 99.99th(us): 209000
+SCAN   - Takes(s): 49.9, Count: 95002, OPS: 1903.8, Avg(us): 9880, Min(us): 1418, Max(us): 238406, 99th(us): 22000, 99.9th(us): 31000, 99.99th(us): 233000
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               
+[31mERRO[0m[0050] batch commands send error: EOF               

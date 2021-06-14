@@ -1,0 +1,28 @@
+{}
+Connected to MongoDB!
+***************** properties *****************
+"operationcount"="100000"
+"threadcount"="20"
+"fieldlength"="16"
+"updateproportion"="0"
+"mongodb.username"="root"
+"fieldcount"="5"
+"recordcount"="100000"
+"dotransactions"="true"
+"readproportion"="0.95"
+"workload"="core"
+"insertproportion"="0.05"
+"maxscanlength"="10"
+"scanproportion"="0"
+"mongodb.password"="test123"
+"requestdistribution"="latest"
+"readallfields"="true"
+"mongodb.uri"="mongodb://mongodb:27017"
+**********************************************
+INSERT - Takes(s): 9.9, Count: 4991, OPS: 506.5, Avg(us): 2057, Min(us): 245, Max(us): 374488, 99th(us): 6000, 99.9th(us): 277000, 99.99th(us): 375000
+READ   - Takes(s): 9.6, Count: 62468, OPS: 6491.8, Avg(us): 1967, Min(us): 435, Max(us): 18395, 99th(us): 7000, 99.9th(us): 12000, 99.99th(us): 16000
+READ_ERROR - Takes(s): 10.0, Count: 32396, OPS: 3239.3, Avg(us): 1960, Min(us): 393, Max(us): 64069, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 60000
+Run finished, takes 10.0366872s
+INSERT - Takes(s): 9.9, Count: 4995, OPS: 505.1, Avg(us): 2055, Min(us): 245, Max(us): 374488, 99th(us): 6000, 99.9th(us): 277000, 99.99th(us): 375000
+READ   - Takes(s): 9.7, Count: 62570, OPS: 6478.9, Avg(us): 1965, Min(us): 435, Max(us): 18395, 99th(us): 7000, 99.9th(us): 12000, 99.99th(us): 16000
+READ_ERROR - Takes(s): 10.0, Count: 32435, OPS: 3231.9, Avg(us): 1959, Min(us): 393, Max(us): 64069, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 60000

@@ -1,0 +1,77 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"requestdistribution"="uniform"
+"operationcount"="100000"
+"dotransactions"="true"
+"recordcount"="100000"
+"insertproportion"="0"
+"tikv.type"="txn"
+"updateproportion"="0"
+"readallfields"="true"
+"threadcount"="20"
+"readproportion"="1"
+"workload"="core"
+"fieldcount"="5"
+"fieldlength"="16"
+"maxscanlength"="10"
+"tikv.pd"="pd:2379"
+"scanproportion"="0"
+**********************************************
+[33mWARN[0m[0008] get timestamp too slow: 126.3004ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.35ms             
+[33mWARN[0m[0008] get timestamp too slow: 126.3261ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.4654ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.5019ms           
+[33mWARN[0m[0008] get timestamp too slow: 127.0019ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.3446ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.2005ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.5625ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.294ms            
+[33mWARN[0m[0008] get timestamp too slow: 125.6178ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.1366ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.8833ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.3673ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.4936ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.9308ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.8788ms           
+[33mWARN[0m[0008] get timestamp too slow: 125.5961ms           
+[33mWARN[0m[0008] get timestamp too slow: 126.42ms             
+[33mWARN[0m[0008] get timestamp too slow: 125.8727ms           
+READ   - Takes(s): 9.8, Count: 89330, OPS: 9110.1, Avg(us): 2222, Min(us): 721, Max(us): 197017, 99th(us): 6000, 99.9th(us): 13000, 99.99th(us): 197000
+[33mWARN[0m[0011] get timestamp too slow: 165.8416ms           
+[33mWARN[0m[0011] get timestamp too slow: 165.3312ms           
+[33mWARN[0m[0011] get timestamp too slow: 165.9236ms           
+[33mWARN[0m[0011] get timestamp too slow: 165.5223ms           
+[33mWARN[0m[0011] get timestamp too slow: 176.3047ms           
+[33mWARN[0m[0011] get timestamp too slow: 175.4722ms           
+[33mWARN[0m[0011] get timestamp too slow: 180.071ms            
+[33mWARN[0m[0011] get timestamp too slow: 179.0576ms           
+[33mWARN[0m[0011] get timestamp too slow: 178.7658ms           
+[33mWARN[0m[0011] get timestamp too slow: 180.009ms            
+[33mWARN[0m[0011] get timestamp too slow: 179.0728ms           
+[33mWARN[0m[0011] get timestamp too slow: 180.2038ms           
+[33mWARN[0m[0011] get timestamp too slow: 180.5317ms           
+[33mWARN[0m[0011] get timestamp too slow: 179.9981ms           
+Run finished, takes 11.3169098s
+READ   - Takes(s): 11.1, Count: 100000, OPS: 8992.2, Avg(us): 2228, Min(us): 721, Max(us): 212568, 99th(us): 5000, 99.9th(us): 14000, 99.99th(us): 207000
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               
+[31mERRO[0m[0011] batch commands send error: EOF               

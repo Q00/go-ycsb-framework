@@ -1,0 +1,21 @@
+{}
+***************** properties *****************
+"fieldcount"="5"
+"workload"="core"
+"threadcount"="20"
+"dotransactions"="true"
+"recordcount"="100000"
+"operationcount"="100000"
+"updateproportion"="0.05"
+"requestdistribution"="uniform"
+"readproportion"="0.95"
+"mysql.host"="mariadb"
+"maxscanlength"="10"
+"insertproportion"="0"
+"fieldlength"="16"
+"readallfields"="true"
+"scanproportion"="0"
+**********************************************
+Run finished, takes 4.7468969s
+READ   - Takes(s): 4.7, Count: 95040, OPS: 20045.0, Avg(us): 817, Min(us): 119, Max(us): 25417, 99th(us): 4000, 99.9th(us): 10000, 99.99th(us): 25000
+UPDATE - Takes(s): 4.7, Count: 4960, OPS: 1047.3, Avg(us): 1883, Min(us): 149, Max(us): 24461, 99th(us): 8000, 99.9th(us): 15000, 99.99th(us): 25000

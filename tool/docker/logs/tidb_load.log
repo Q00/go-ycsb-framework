@@ -1,0 +1,20 @@
+{}
+***************** properties *****************
+"mysql.host"="tidb"
+"workload"="core"
+"recordcount"="100000"
+"fieldcount"="5"
+"fieldlength"="16"
+"dotransactions"="false"
+"maxscanlength"="10"
+"mysql.port"="4000"
+"operationcount"="100000"
+"threadcount"="20"
+**********************************************
+INSERT - Takes(s): 9.8, Count: 19236, OPS: 1965.5, Avg(us): 10191, Min(us): 4079, Max(us): 169716, 99th(us): 25000, 99.9th(us): 134000, 99.99th(us): 160000
+INSERT - Takes(s): 19.8, Count: 40222, OPS: 2032.8, Avg(us): 9830, Min(us): 4079, Max(us): 169716, 99th(us): 22000, 99.9th(us): 66000, 99.99th(us): 144000
+INSERT - Takes(s): 29.8, Count: 60836, OPS: 2042.4, Avg(us): 9778, Min(us): 3816, Max(us): 230728, 99th(us): 22000, 99.9th(us): 66000, 99.99th(us): 228000
+INSERT - Takes(s): 39.8, Count: 81711, OPS: 2053.7, Avg(us): 9721, Min(us): 3816, Max(us): 230728, 99th(us): 21000, 99.9th(us): 46000, 99.99th(us): 227000
+INSERT - Takes(s): 49.8, Count: 100000, OPS: 2008.6, Avg(us): 9833, Min(us): 3568, Max(us): 1027805, 99th(us): 20000, 99.9th(us): 47000, 99.99th(us): 1021000
+Run finished, takes 52.1782742s
+INSERT - Takes(s): 52.0, Count: 100000, OPS: 1924.5, Avg(us): 9833, Min(us): 3568, Max(us): 1027805, 99th(us): 20000, 99.9th(us): 47000, 99.99th(us): 1021000

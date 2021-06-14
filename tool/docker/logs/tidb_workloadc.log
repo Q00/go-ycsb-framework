@@ -1,0 +1,23 @@
+{}
+***************** properties *****************
+"mysql.host"="tidb"
+"mysql.port"="4000"
+"dotransactions"="true"
+"threadcount"="20"
+"readproportion"="1"
+"insertproportion"="0"
+"readallfields"="true"
+"updateproportion"="0"
+"maxscanlength"="10"
+"requestdistribution"="uniform"
+"recordcount"="100000"
+"fieldlength"="16"
+"operationcount"="100000"
+"workload"="core"
+"scanproportion"="0"
+"fieldcount"="5"
+**********************************************
+READ   - Takes(s): 10.0, Count: 36642, OPS: 3673.8, Avg(us): 5428, Min(us): 1970, Max(us): 30616, 99th(us): 14000, 99.9th(us): 20000, 99.99th(us): 26000
+READ   - Takes(s): 20.0, Count: 76461, OPS: 3828.1, Avg(us): 5208, Min(us): 1697, Max(us): 30616, 99th(us): 13000, 99.9th(us): 19000, 99.99th(us): 26000
+Run finished, takes 25.9925828s
+READ   - Takes(s): 26.0, Count: 100000, OPS: 3851.2, Avg(us): 5156, Min(us): 1697, Max(us): 30616, 99th(us): 12000, 99.9th(us): 18000, 99.99th(us): 25000

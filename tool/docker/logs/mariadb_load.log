@@ -1,0 +1,14 @@
+{}
+***************** properties *****************
+"maxscanlength"="10"
+"operationcount"="100000"
+"threadcount"="20"
+"workload"="core"
+"fieldlength"="16"
+"mysql.host"="mariadb"
+"fieldcount"="5"
+"recordcount"="100000"
+"dotransactions"="false"
+**********************************************
+Run finished, takes 9.9740647s
+INSERT - Takes(s): 9.9, Count: 100000, OPS: 10094.6, Avg(us): 1933, Min(us): 559, Max(us): 42932, 99th(us): 6000, 99.9th(us): 18000, 99.99th(us): 41000

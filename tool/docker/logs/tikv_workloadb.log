@@ -1,0 +1,31 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"readproportion"="0.95"
+"requestdistribution"="uniform"
+"dotransactions"="true"
+"fieldcount"="5"
+"tikv.type"="txn"
+"operationcount"="100000"
+"maxscanlength"="10"
+"workload"="core"
+"scanproportion"="0"
+"threadcount"="20"
+"tikv.pd"="pd:2379"
+"recordcount"="100000"
+"insertproportion"="0"
+"fieldlength"="16"
+"updateproportion"="0.05"
+"readallfields"="true"
+**********************************************
+[36mINFO[0m[0000] con:0 2PC clean up done, tid: 425626599820099771 
+READ   - Takes(s): 9.7, Count: 61689, OPS: 6335.4, Avg(us): 2654, Min(us): 814, Max(us): 272359, 99th(us): 7000, 99.9th(us): 12000, 99.99th(us): 264000
+UPDATE - Takes(s): 9.7, Count: 3189, OPS: 327.8, Avg(us): 10786, Min(us): 6225, Max(us): 272717, 99th(us): 23000, 99.9th(us): 32000, 99.99th(us): 273000
+UPDATE_ERROR - Takes(s): 9.5, Count: 1, OPS: 0.1, Avg(us): 150903, Min(us): 150903, Max(us): 150903, 99th(us): 151000, 99.9th(us): 151000, 99.99th(us): 151000
+[36mINFO[0m[0014] con:0 2PC clean up done, tid: 425626603450794241 
+Run finished, takes 15.3046199s
+READ   - Takes(s): 15.0, Count: 94989, OPS: 6315.4, Avg(us): 2587, Min(us): 756, Max(us): 272359, 99th(us): 7000, 99.9th(us): 11000, 99.99th(us): 264000
+UPDATE - Takes(s): 15.0, Count: 5008, OPS: 333.2, Avg(us): 10847, Min(us): 5509, Max(us): 272717, 99th(us): 22000, 99.9th(us): 103000, 99.99th(us): 273000
+UPDATE_ERROR - Takes(s): 14.8, Count: 2, OPS: 0.1, Avg(us): 92594, Min(us): 34286, Max(us): 150903, 99th(us): 151000, 99.9th(us): 151000, 99.99th(us): 151000

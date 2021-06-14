@@ -1,0 +1,27 @@
+{}
+Connected to MongoDB!
+***************** properties *****************
+"recordcount"="100000"
+"fieldlength"="16"
+"maxscanlength"="10"
+"threadcount"="20"
+"scanproportion"="0"
+"updateproportion"="0"
+"readmodifywriteproportion"="0.5"
+"requestdistribution"="uniform"
+"operationcount"="100000"
+"insertproportion"="0"
+"readproportion"="0.5"
+"fieldcount"="5"
+"mongodb.username"="root"
+"mongodb.uri"="mongodb://mongodb:27017"
+"dotransactions"="true"
+"readallfields"="true"
+"mongodb.password"="test123"
+"workload"="core"
+**********************************************
+READ_ERROR - Takes(s): 10.0, Count: 97978, OPS: 9798.2, Avg(us): 2006, Min(us): 458, Max(us): 89769, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 63000
+READ_MODIFY_WRITE - Takes(s): 10.0, Count: 48980, OPS: 4898.1, Avg(us): 2040, Min(us): 481, Max(us): 89858, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 61000
+Run finished, takes 10.2275058s
+READ_ERROR - Takes(s): 10.2, Count: 100000, OPS: 9779.3, Avg(us): 2000, Min(us): 455, Max(us): 89769, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 61000
+READ_MODIFY_WRITE - Takes(s): 10.2, Count: 49991, OPS: 4888.8, Avg(us): 2034, Min(us): 479, Max(us): 89858, 99th(us): 8000, 99.9th(us): 13000, 99.99th(us): 63000

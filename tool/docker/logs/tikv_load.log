@@ -1,0 +1,23 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"operationcount"="100000"
+"maxscanlength"="10"
+"tikv.pd"="pd:2379"
+"dotransactions"="false"
+"workload"="core"
+"threadcount"="20"
+"tikv.type"="txn"
+"recordcount"="100000"
+"fieldcount"="5"
+"fieldlength"="16"
+**********************************************
+INSERT - Takes(s): 9.6, Count: 16987, OPS: 1774.1, Avg(us): 11705, Min(us): 5677, Max(us): 429380, 99th(us): 29000, 99.9th(us): 427000, 99.99th(us): 430000
+INSERT - Takes(s): 19.6, Count: 34301, OPS: 1752.3, Avg(us): 11606, Min(us): 5677, Max(us): 429380, 99th(us): 29000, 99.9th(us): 75000, 99.99th(us): 430000
+INSERT - Takes(s): 29.6, Count: 51872, OPS: 1753.9, Avg(us): 11517, Min(us): 5075, Max(us): 653052, 99th(us): 29000, 99.9th(us): 78000, 99.99th(us): 646000
+INSERT - Takes(s): 39.6, Count: 71241, OPS: 1800.2, Avg(us): 11183, Min(us): 5075, Max(us): 653052, 99th(us): 27000, 99.9th(us): 71000, 99.99th(us): 646000
+INSERT - Takes(s): 49.6, Count: 90516, OPS: 1825.9, Avg(us): 11003, Min(us): 5014, Max(us): 653052, 99th(us): 27000, 99.9th(us): 68000, 99.99th(us): 646000
+Run finished, takes 54.7645311s
+INSERT - Takes(s): 54.3, Count: 99999, OPS: 1840.3, Avg(us): 10894, Min(us): 4233, Max(us): 653052, 99th(us): 27000, 99.9th(us): 69000, 99.99th(us): 646000

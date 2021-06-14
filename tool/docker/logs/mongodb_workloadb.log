@@ -1,0 +1,24 @@
+{}
+Connected to MongoDB!
+***************** properties *****************
+"maxscanlength"="10"
+"mongodb.username"="root"
+"workload"="core"
+"fieldcount"="5"
+"readproportion"="0.95"
+"operationcount"="100000"
+"insertproportion"="0"
+"readallfields"="true"
+"dotransactions"="true"
+"threadcount"="20"
+"mongodb.password"="test123"
+"requestdistribution"="uniform"
+"recordcount"="100000"
+"fieldlength"="16"
+"scanproportion"="0"
+"updateproportion"="0.05"
+"mongodb.uri"="mongodb://mongodb:27017"
+**********************************************
+Run finished, takes 9.428836s
+READ_ERROR - Takes(s): 9.4, Count: 94983, OPS: 10075.1, Avg(us): 1874, Min(us): 375, Max(us): 75310, 99th(us): 8000, 99.9th(us): 15000, 99.99th(us): 55000
+UPDATE_ERROR - Takes(s): 9.4, Count: 5017, OPS: 534.9, Avg(us): 1100, Min(us): 264, Max(us): 67831, 99th(us): 6000, 99.9th(us): 18000, 99.99th(us): 68000

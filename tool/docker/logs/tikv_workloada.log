@@ -1,0 +1,101 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"maxscanlength"="10"
+"tikv.pd"="pd:2379"
+"readallfields"="true"
+"fieldcount"="5"
+"tikv.type"="txn"
+"insertproportion"="0"
+"threadcount"="20"
+"operationcount"="100000"
+"requestdistribution"="uniform"
+"dotransactions"="true"
+"readproportion"="0.5"
+"workload"="core"
+"scanproportion"="0"
+"recordcount"="100000"
+"updateproportion"="0.5"
+"fieldlength"="16"
+**********************************************
+[36mINFO[0m[0000] con:0 2PC clean up done, tid: 425626587896217614 
+READ   - Takes(s): 9.7, Count: 11342, OPS: 1168.3, Avg(us): 3243, Min(us): 941, Max(us): 314786, 99th(us): 9000, 99.9th(us): 308000, 99.99th(us): 315000
+UPDATE - Takes(s): 9.7, Count: 11424, OPS: 1179.4, Avg(us): 14200, Min(us): 6572, Max(us): 339844, 99th(us): 34000, 99.9th(us): 93000, 99.99th(us): 335000
+UPDATE_ERROR - Takes(s): 9.5, Count: 1, OPS: 0.1, Avg(us): 202582, Min(us): 202582, Max(us): 202582, 99th(us): 203000, 99.9th(us): 203000, 99.99th(us): 203000
+[33mWARN[0m[0011] get timestamp too slow: 1.0036448s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0039315s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0040507s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0040619s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0044767s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0039855s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0048769s           
+[33mWARN[0m[0011] get timestamp too slow: 1.0064709s           
+[33mWARN[0m[0017] get timestamp too slow: 45.049ms             
+[33mWARN[0m[0017] get timestamp too slow: 45.2085ms            
+[33mWARN[0m[0017] get timestamp too slow: 46.4249ms            
+[33mWARN[0m[0017] get timestamp too slow: 39.9038ms            
+[33mWARN[0m[0017] get timestamp too slow: 38.829ms             
+[33mWARN[0m[0017] get timestamp too slow: 40.2162ms            
+READ   - Takes(s): 19.7, Count: 21950, OPS: 1113.7, Avg(us): 3288, Min(us): 845, Max(us): 1008769, 99th(us): 9000, 99.9th(us): 30000, 99.99th(us): 1007000
+UPDATE - Takes(s): 19.7, Count: 22036, OPS: 1119.3, Avg(us): 14800, Min(us): 6572, Max(us): 1064685, 99th(us): 32000, 99.9th(us): 315000, 99.99th(us): 1025000
+UPDATE_ERROR - Takes(s): 19.5, Count: 1, OPS: 0.1, Avg(us): 202582, Min(us): 202582, Max(us): 202582, 99th(us): 203000, 99.9th(us): 203000, 99.99th(us): 203000
+[36mINFO[0m[0020] con:0 2PC clean up done, tid: 425626593221672995 
+[36mINFO[0m[0027] con:0 2PC clean up done, tid: 425626595095740478 
+READ   - Takes(s): 29.7, Count: 35252, OPS: 1186.6, Avg(us): 3051, Min(us): 828, Max(us): 1008769, 99th(us): 8000, 99.9th(us): 15000, 99.99th(us): 1005000
+UPDATE - Takes(s): 29.7, Count: 35437, OPS: 1193.7, Avg(us): 13825, Min(us): 6572, Max(us): 1064685, 99th(us): 30000, 99.9th(us): 90000, 99.99th(us): 1025000
+UPDATE_ERROR - Takes(s): 29.5, Count: 3, OPS: 0.1, Avg(us): 99091, Min(us): 42707, Max(us): 202582, 99th(us): 203000, 99.9th(us): 203000, 99.99th(us): 203000
+[36mINFO[0m[0031] con:0 2PC clean up done, tid: 425626596026351765 
+[36mINFO[0m[0035] con:0 2PC clean up done, tid: 425626597127356584 
+[36mINFO[0m[0036] con:0 2PC clean up done, tid: 425626597428822056 
+READ   - Takes(s): 39.7, Count: 48707, OPS: 1226.6, Avg(us): 2926, Min(us): 801, Max(us): 1008769, 99th(us): 8000, 99.9th(us): 14000, 99.99th(us): 315000
+UPDATE - Takes(s): 39.7, Count: 48865, OPS: 1231.3, Avg(us): 13382, Min(us): 5882, Max(us): 1064685, 99th(us): 29000, 99.9th(us): 86000, 99.99th(us): 1025000
+UPDATE_ERROR - Takes(s): 39.5, Count: 6, OPS: 0.2, Avg(us): 95059, Min(us): 33675, Max(us): 202582, 99th(us): 203000, 99.9th(us): 203000, 99.99th(us): 203000
+Run finished, takes 41.385267s
+READ   - Takes(s): 41.1, Count: 49949, OPS: 1215.5, Avg(us): 2914, Min(us): 801, Max(us): 1008769, 99th(us): 8000, 99.9th(us): 14000, 99.99th(us): 315000
+UPDATE - Takes(s): 41.1, Count: 50045, OPS: 1218.5, Avg(us): 13337, Min(us): 4737, Max(us): 1064685, 99th(us): 29000, 99.9th(us): 84000, 99.99th(us): 1025000
+UPDATE_ERROR - Takes(s): 40.9, Count: 6, OPS: 0.1, Avg(us): 95059, Min(us): 33675, Max(us): 202582, 99th(us): 203000, 99.9th(us): 203000, 99.99th(us): 203000
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               
+[31mERRO[0m[0041] batch commands send error: EOF               

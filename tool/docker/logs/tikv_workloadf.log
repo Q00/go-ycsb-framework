@@ -1,0 +1,132 @@
+{}
+[36mINFO[0m[0000] [pd] create pd client with endpoints [pd:2379] 
+[36mINFO[0m[0000] [pd] leader switches to: http://pd:2379, previous:  
+[36mINFO[0m[0000] [pd] init cluster id 6973465562221055462     
+***************** properties *****************
+"maxscanlength"="10"
+"dotransactions"="true"
+"requestdistribution"="uniform"
+"updateproportion"="0"
+"fieldcount"="5"
+"operationcount"="100000"
+"readproportion"="0.5"
+"scanproportion"="0"
+"insertproportion"="0"
+"tikv.type"="txn"
+"recordcount"="100000"
+"threadcount"="20"
+"workload"="core"
+"readmodifywriteproportion"="0.5"
+"readallfields"="true"
+"fieldlength"="16"
+"tikv.pd"="pd:2379"
+**********************************************
+[36mINFO[0m[0000] con:0 2PC clean up done, tid: 425626626869952532 
+[36mINFO[0m[0000] con:0 2PC clean up done, tid: 425626626869952550 
+[36mINFO[0m[0000] con:0 2PC clean up done, tid: 425626626869952538 
+[36mINFO[0m[0006] con:0 2PC clean up done, tid: 425626628429709441 
+READ   - Takes(s): 9.8, Count: 18935, OPS: 1934.1, Avg(us): 3017, Min(us): 869, Max(us): 212195, 99th(us): 8000, 99.9th(us): 211000, 99.99th(us): 213000
+READ_MODIFY_WRITE - Takes(s): 9.8, Count: 9392, OPS: 960.2, Avg(us): 18112, Min(us): 8676, Max(us): 253054, 99th(us): 41000, 99.9th(us): 184000, 99.99th(us): 254000
+UPDATE - Takes(s): 9.8, Count: 9388, OPS: 959.7, Avg(us): 15019, Min(us): 7208, Max(us): 92488, 99th(us): 34000, 99.9th(us): 87000, 99.99th(us): 93000
+UPDATE_ERROR - Takes(s): 9.7, Count: 4, OPS: 0.4, Avg(us): 135535, Min(us): 40715, Max(us): 182640, 99th(us): 183000, 99.9th(us): 183000, 99.99th(us): 183000
+READ   - Takes(s): 19.8, Count: 38019, OPS: 1921.1, Avg(us): 2948, Min(us): 869, Max(us): 212195, 99th(us): 8000, 99.9th(us): 25000, 99.99th(us): 212000
+READ_MODIFY_WRITE - Takes(s): 19.8, Count: 18920, OPS: 956.5, Avg(us): 18088, Min(us): 8676, Max(us): 253054, 99th(us): 37000, 99.9th(us): 90000, 99.99th(us): 227000
+UPDATE - Takes(s): 19.8, Count: 18916, OPS: 956.2, Avg(us): 15068, Min(us): 6794, Max(us): 92488, 99th(us): 32000, 99.9th(us): 80000, 99.99th(us): 91000
+UPDATE_ERROR - Takes(s): 19.7, Count: 4, OPS: 0.2, Avg(us): 135535, Min(us): 40715, Max(us): 182640, 99th(us): 183000, 99.9th(us): 183000, 99.99th(us): 183000
+READ   - Takes(s): 29.8, Count: 56189, OPS: 1886.2, Avg(us): 2946, Min(us): 869, Max(us): 212195, 99th(us): 8000, 99.9th(us): 24000, 99.99th(us): 212000
+READ_MODIFY_WRITE - Takes(s): 29.8, Count: 27932, OPS: 937.9, Avg(us): 18434, Min(us): 8676, Max(us): 253054, 99th(us): 40000, 99.9th(us): 184000, 99.99th(us): 224000
+UPDATE - Takes(s): 29.8, Count: 27928, OPS: 937.8, Avg(us): 15417, Min(us): 6794, Max(us): 203874, 99th(us): 34000, 99.9th(us): 99000, 99.99th(us): 203000
+UPDATE_ERROR - Takes(s): 29.7, Count: 4, OPS: 0.1, Avg(us): 135535, Min(us): 40715, Max(us): 182640, 99th(us): 183000, 99.9th(us): 183000, 99.99th(us): 183000
+[36mINFO[0m[0034] con:0 2PC clean up done, tid: 425626635812995200 
+[36mINFO[0m[0038] con:0 2PC clean up done, tid: 425626636717391927 
+READ   - Takes(s): 39.8, Count: 75120, OPS: 1887.9, Avg(us): 2933, Min(us): 828, Max(us): 212195, 99th(us): 8000, 99.9th(us): 22000, 99.99th(us): 212000
+READ_MODIFY_WRITE - Takes(s): 39.8, Count: 37444, OPS: 941.2, Avg(us): 18351, Min(us): 8676, Max(us): 253054, 99th(us): 38000, 99.9th(us): 117000, 99.99th(us): 223000
+UPDATE - Takes(s): 39.8, Count: 37438, OPS: 941.1, Avg(us): 15340, Min(us): 6794, Max(us): 203874, 99th(us): 33000, 99.9th(us): 88000, 99.99th(us): 202000
+UPDATE_ERROR - Takes(s): 39.7, Count: 6, OPS: 0.2, Avg(us): 156637, Min(us): 40715, Max(us): 201635, 99th(us): 202000, 99.9th(us): 202000, 99.99th(us): 202000
+[36mINFO[0m[0041] con:0 2PC clean up done, tid: 425626637595574474 
+[36mINFO[0m[0044] con:0 2PC clean up done, tid: 425626638421327993 
+[36mINFO[0m[0049] con:0 2PC clean up done, tid: 425626639788409018 
+READ   - Takes(s): 49.8, Count: 93321, OPS: 1874.3, Avg(us): 2932, Min(us): 828, Max(us): 212195, 99th(us): 8000, 99.9th(us): 20000, 99.99th(us): 212000
+READ_MODIFY_WRITE - Takes(s): 49.8, Count: 46505, OPS: 934.1, Avg(us): 18492, Min(us): 8676, Max(us): 253054, 99th(us): 38000, 99.9th(us): 139000, 99.99th(us): 219000
+UPDATE - Takes(s): 49.8, Count: 46499, OPS: 934.0, Avg(us): 15471, Min(us): 6794, Max(us): 203874, 99th(us): 33000, 99.9th(us): 102000, 99.99th(us): 202000
+UPDATE_ERROR - Takes(s): 49.8, Count: 9, OPS: 0.2, Avg(us): 168504, Min(us): 40715, Max(us): 201635, 99th(us): 202000, 99.9th(us): 202000, 99.99th(us): 202000
+Run finished, takes 53.908265s
+READ   - Takes(s): 53.7, Count: 99999, OPS: 1862.3, Avg(us): 2925, Min(us): 828, Max(us): 212195, 99th(us): 8000, 99.9th(us): 20000, 99.99th(us): 212000
+READ_MODIFY_WRITE - Takes(s): 53.7, Count: 49810, OPS: 927.7, Avg(us): 18449, Min(us): 5986, Max(us): 253054, 99th(us): 39000, 99.9th(us): 139000, 99.99th(us): 223000
+UPDATE - Takes(s): 53.7, Count: 49801, OPS: 927.6, Avg(us): 15435, Min(us): 4849, Max(us): 203874, 99th(us): 34000, 99.9th(us): 99000, 99.99th(us): 202000
+UPDATE_ERROR - Takes(s): 53.7, Count: 9, OPS: 0.2, Avg(us): 168504, Min(us): 40715, Max(us): 201635, 99th(us): 202000, 99.9th(us): 202000, 99.99th(us): 202000
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               
+[31mERRO[0m[0054] batch commands send error: EOF               

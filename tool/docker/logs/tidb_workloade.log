@@ -1,0 +1,31 @@
+{}
+***************** properties *****************
+"recordcount"="100000"
+"mysql.host"="tidb"
+"dotransactions"="true"
+"fieldlength"="16"
+"workload"="core"
+"readproportion"="0"
+"operationcount"="100000"
+"updateproportion"="0"
+"insertproportion"="0.05"
+"scanproportion"="0.95"
+"maxscanlength"="10"
+"mysql.port"="4000"
+"scanlengthdistribution"="uniform"
+"fieldcount"="5"
+"readallfields"="true"
+"threadcount"="20"
+"requestdistribution"="uniform"
+**********************************************
+INSERT - Takes(s): 9.9, Count: 1020, OPS: 102.6, Avg(us): 5937, Min(us): 1964, Max(us): 39218, 99th(us): 19000, 99.9th(us): 34000, 99.99th(us): 40000
+SCAN   - Takes(s): 9.9, Count: 18760, OPS: 1886.8, Avg(us): 10287, Min(us): 3219, Max(us): 53598, 99th(us): 25000, 99.9th(us): 43000, 99.99th(us): 54000
+INSERT - Takes(s): 19.9, Count: 2009, OPS: 100.7, Avg(us): 5750, Min(us): 1684, Max(us): 41147, 99th(us): 17000, 99.9th(us): 33000, 99.99th(us): 40000
+SCAN   - Takes(s): 19.9, Count: 37529, OPS: 1881.8, Avg(us): 10315, Min(us): 2615, Max(us): 141030, 99th(us): 26000, 99.9th(us): 66000, 99.99th(us): 136000
+INSERT - Takes(s): 29.9, Count: 3023, OPS: 100.9, Avg(us): 5569, Min(us): 1598, Max(us): 41147, 99th(us): 16000, 99.9th(us): 33000, 99.99th(us): 42000
+SCAN   - Takes(s): 29.9, Count: 57948, OPS: 1935.3, Avg(us): 10034, Min(us): 2595, Max(us): 141030, 99th(us): 25000, 99.9th(us): 51000, 99.99th(us): 135000
+INSERT - Takes(s): 39.9, Count: 4019, OPS: 100.6, Avg(us): 5529, Min(us): 1596, Max(us): 41147, 99th(us): 16000, 99.9th(us): 26000, 99.99th(us): 42000
+SCAN   - Takes(s): 39.9, Count: 77786, OPS: 1947.4, Avg(us): 9971, Min(us): 2595, Max(us): 141030, 99th(us): 25000, 99.9th(us): 43000, 99.99th(us): 134000
+Run finished, takes 49.0585731s
+INSERT - Takes(s): 49.0, Count: 4963, OPS: 101.3, Avg(us): 5566, Min(us): 1596, Max(us): 41147, 99th(us): 16000, 99.9th(us): 29000, 99.99th(us): 42000
+SCAN   - Takes(s): 49.0, Count: 95037, OPS: 1939.5, Avg(us): 9951, Min(us): 2595, Max(us): 141030, 99th(us): 24000, 99.9th(us): 42000, 99.99th(us): 132000
