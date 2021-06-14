@@ -1,16 +1,3 @@
-// Copyright 2018 PingCAP, Inc.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 package main
 
 import (
@@ -46,27 +33,9 @@ import (
 	// Register PostgreSQL database
 	_ "github.com/q00/golang-mongo/db/pg"
 	// Register Aerospike database
-	_ "github.com/q00/golang-mongo/db/aerospike"
-	// Register Badger database
-	_ "github.com/q00/golang-mongo/db/badger"
-	// Register RocksDB database
-	_ "github.com/q00/golang-mongo/db/rocksdb"
-	// Register Spanner database
-	_ "github.com/q00/golang-mongo/db/spanner"
-	// Register pegasus database
-	_ "github.com/q00/golang-mongo/db/pegasus"
-	// Register sqlite database
-	_ "github.com/q00/golang-mongo/db/sqlite"
-	// Register cassandra database
-	_ "github.com/q00/golang-mongo/db/cassandra"
 	// Register mongodb database
 	_ "github.com/q00/golang-mongo/db/mongodb"
 	// Register redis database
-	_ "github.com/q00/golang-mongo/db/redis"
-	// Register boltdb database
-	_ "github.com/q00/golang-mongo/db/boltdb"
-	// Register minio
-	_ "github.com/q00/golang-mongo/db/minio"
 )
 
 var (
@@ -157,8 +126,8 @@ func main() {
 	}()
 
 	rootCmd := &cobra.Command{
-		Use:   "go-ycsb",
-		Short: "Go YCSB",
+		Use:   "go-f",
+		Short: "Go Framework",
 	}
 
 	rootCmd.AddCommand(
